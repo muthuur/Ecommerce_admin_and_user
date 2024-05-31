@@ -1,0 +1,52 @@
+{
+  "products": [
+    {
+      "id": "1717066813594",
+      "name": "classic T-shirt",
+      "description": "Classic cotton T-shirt",
+      "price": 1000,
+      "category": "T-shirts",
+      "image": "https://imgs.search.brave.com/XoibVgKuilrZUAVd8QsFfj5FkujieOD2EOd1n52eywU/rs:fit:500:0:0/g:ce/aHR0cHM6Ly93d3cu/aW5rcGl4aS5jb20v/ZGF0YS9zdG9yZS9i/bGFjay1pdGFsaWFu/LXBhcnRzLXBlcnNv/bmFsaXplZC10c2hp/cnQtc20uanBn"
+    },
+    {
+      "id": "1717067755967",
+      "name": "hoodie",
+      "description": "customized hoodies",
+      "price": 1800,
+      "category": "Hoodies",
+      "image": "https://imgs.search.brave.com/cdRUtS1a0b8M11xnGmohP8-TNBp_Z-M55djpeooh638/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjF2ZTd1OE4rMkwu/anBn"
+    },
+    {
+      "id": "1717067966680",
+      "name": "Air Max",
+      "description": "customised Air Max Shoes ",
+      "price": 5500,
+      "category": "shoes",
+      "image": "https://imgs.search.brave.com/TCElMP02wdUZf6mK1il5xuLKrW1ma-bbqR6v01GosIA/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzFmLzRk/LzJhLzFmNGQyYWJj/N2YzY2FiY2FiNDU5/OWI3MTkwNDAxNWI0/LmpwZw"
+    },
+    {
+      "id": "1717077484541",
+      "name": "custom socks",
+      "description": "customised christmas socks",
+      "price": 400,
+      "category": "Socks",
+      "image": "https://imgs.search.brave.com/_zflIap7nCynHqQbgoeUgHsE4Us8yqaMbHASijHIgOU/rs:fit:500:0:0/g:ce/aHR0cHM6Ly93d3cu/Y2FudmFzY2hhbXAu/Y29tLmF1L3N0YXRp/Yy9pbWFnZXMvbGFu/ZGluZ3BhZ2UvY3Vz/dG9tc29ja3MvY3Vz/dG9tLXBob3RvLXNv/Y2tzLWZvci14bWFz/LmpwZw"
+    },
+    {
+      "id": "1717079127850",
+      "name": "leather jacket",
+      "description": "XXL leather jackets",
+      "price": 1800,
+      "category": "jackets",
+      "image": "https://imgs.search.brave.com/pdJnRQ8bjajri42HvdTF71MGiiAbed4y3IGEZEhQzd0/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzFVV1g1V084dUwu/anBn"
+    },
+    {
+      "id": "1717081625333",
+      "name": "leather jacket",
+      "description": "a white leather jacket",
+      "price": 1800,
+      "category": "Jackets",
+      "image": "https://imgs.search.brave.com/wkzDatmdPB6Ll8EXwlCHiZJdrjYKNZTtLxzgWgLBA6E/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjFmdUlNUTJhV0wu/anBn"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Samirates Outfit Store</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Samirates Outfit Store</h1>
+        <nav>
+          <ul>
+            <li>Admin Platform</li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <div class="product-form">
+          <h2>Add New Product</h2>
+          <form>
+            <input type="text" placeholder="Name" id="name" />
+            <textarea placeholder="Description" id="description"></textarea>
+            <input type="number" placeholder="Price" id="price" step="0.01" />
+            <input type="text" placeholder="Category" id="category" />
+            <input type="text" placeholder="Image URL" id="image" />
+            <div class="addProductBtn">
+              <button type="submit" id="addProductBtn">Add Product</button>
+            </div>
+          </form>
+        </div>
+        <div class="product-list">
+          <h2>Product List</h2>
+          <div id="productList" class="product-grid"></div>
+        </div>
+        <div class="update-form" style="display: none">
+          <h2>Update Product</h2>
+          <form>
+            <input type="text" placeholder="Name" id="updateName" />
+            <textarea
+              placeholder="Description"
+              id="updateDescription"
+            ></textarea>
+            <input
+              type="number"
+              placeholder="Price"
+              id="updatePrice"
+              step="0.01"
+            />
+            <input type="text" placeholder="Category" id="updateCategory" />
+            <input type="text" placeholder="Image URL" id="updateImage" />
+            <div class="updatebtn">
+              <button type="button" id="updateProductBtn">
+                Update Product
+              </button>
+              <button type="button" id="cancelUpdateBtn">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </main>
+      <footer>
+        <p>&copy; 2024 Samirates Outfit Store</p>
+      </footer>
+    </div>
+    <script src="./dist/main.js"></script>
+  </body>
+</html>
