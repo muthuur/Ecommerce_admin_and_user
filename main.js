@@ -1,62 +1,33 @@
-interface Product {
-  id: string;
-  name: string;
-  description: string;
-  price: number;
-  category: string;
-  image: string;
-}
+// Define the Product interface
+const productForm = document.querySelector("form");
+const productList = document.getElementById("productList");
+const updateForm = document.querySelector(".update-form");
+const updateNameInput = document.getElementById("updateName");
+const updateDescriptionInput = document.getElementById("updateDescription");
+const updatePriceInput = document.getElementById("updatePrice");
+const updateCategoryInput = document.getElementById("updateCategory");
+const updateImageInput = document.getElementById("updateImage");
+const addProductBtn = document.getElementById("addProductBtn");
+const updateProductBtn = document.getElementById("updateProductBtn");
+const cancelUpdateBtn = document.getElementById("cancelUpdateBtn");
 
-const productForm = document.querySelector("form") as HTMLFormElement;
-const productsList = document.getElementById("productList") as HTMLDivElement;
-const updateForm = document.querySelector(".update-form") as HTMLDivElement;
-const updateNameInput = document.getElementById(
-  "updateName"
-) as HTMLInputElement;
-const updateDescriptionInput = document.getElementById(
-  "updateDescription"
-) as HTMLTextAreaElement;
-const updatePriceInput = document.getElementById(
-  "updatePrice"
-) as HTMLInputElement;
-const updateCategoryInput = document.getElementById(
-  "updateCategory"
-) as HTMLInputElement;
-const updateImageInput = document.getElementById(
-  "updateImage"
-) as HTMLInputElement;
-const addProductBtn = document.getElementById(
-  "addProductBtn"
-) as HTMLButtonElement;
-const updateProductBtn = document.getElementById(
-  "updateProductBtn"
-) as HTMLButtonElement;
-const cancelUpdateBtn = document.getElementById(
-  "cancelUpdateBtn"
-) as HTMLButtonElement;
-
-let currentProductId: string | null = null;
+let currentProductId = null;
 
 // Fetch products from the server and display them
 fetchProducts();
 
 // Add event listener for form submission
-productForm?.addEventListener("submit", (event) => {
+productForm.addEventListener("submit", (event) => {
   event.preventDefault();
-  const name = (document.getElementById("name") as HTMLInputElement).value;
-  const description = (
-    document.getElementById("description") as HTMLTextAreaElement
-  ).value;
-  const price = parseFloat(
-    (document.getElementById("price") as HTMLInputElement).value
-  );
-  const category = (document.getElementById("category") as HTMLInputElement)
-    .value;
-  const image = (document.getElementById("image") as HTMLInputElement).value;
+  const name = document.getElementById("name").value;
+  const description = document.getElementById("description").value;
+  const price = parseFloat(document.getElementById("price").value);
+  const category = document.getElementById("category").value;
+  const image = document.getElementById("image").value;
 
   // Create a new product object
-  const newProduct: Product = {
-    id: "" + Date.now(), // Using timestamp as a temporary ID
+  const newProduct = {
+    id: Date.now(), // Using timestamp as a temporary ID
     name,
     description,
     price,
@@ -79,13 +50,12 @@ productForm?.addEventListener("submit", (event) => {
 
       // Fetch and display the updated product list
       fetchProducts();
-      console.log(newProduct);
     })
     .catch((error) => console.error("Error creating product:", error));
 });
 
 // Function to fetch and display the product list
-function fetchProduct() {
+function fetchProducts() {
   fetch("http://localhost:3000/products")
     .then((response) => response.json())
     .then((data) => {
@@ -93,7 +63,7 @@ function fetchProduct() {
       productList.innerHTML = "";
 
       // Iterate over the products and create product cards
-      data.forEach((product: Product) => {
+      data.forEach((product) => {
         const productCard = document.createElement("div");
         productCard.classList.add("product-card");
 
@@ -111,10 +81,7 @@ function fetchProduct() {
         productCard.appendChild(description);
 
         const price = document.createElement("p");
-        // Check if price is valid before calling toFixed()
-        price.textContent = `KSh${
-          product.price ? product.price.toFixed(2) : "0.00"
-        }`;
+        price.textContent = `$${product.price.toFixed(2)}`;
         price.classList.add("price");
         productCard.appendChild(price);
 
@@ -140,10 +107,10 @@ function fetchProduct() {
 }
 
 // Function to show the update form
-function showUpdateForm(product: Product) {
+function showUpdateForm(product) {
   updateNameInput.value = product.name;
   updateDescriptionInput.value = product.description;
-  updatePriceInput.value = product.price.toString();
+  updatePriceInput.value = product.price;
   updateCategoryInput.value = product.category;
   updateImageInput.value = product.image;
   currentProductId = product.id;
@@ -152,8 +119,8 @@ function showUpdateForm(product: Product) {
 
 // Function to update a product
 function updateProduct() {
-  const updatedProduct: Product = {
-    id: currentProductId!,
+  const updatedProduct = {
+    id: currentProductId,
     name: updateNameInput.value,
     description: updateDescriptionInput.value,
     price: parseFloat(updatePriceInput.value),
@@ -185,7 +152,7 @@ function updateProduct() {
 }
 
 // Function to delete a product
-function deleteProduct(id: string) {
+function deleteProduct(id) {
   fetch(`http://localhost:3000/products/${id}`, {
     method: "DELETE",
   })
@@ -197,8 +164,8 @@ function deleteProduct(id: string) {
 }
 
 // Add event listeners for update and cancel buttons
-updateProductBtn?.addEventListener("click", updateProduct);
-cancelUpdateBtn?.addEventListener("click", () => {
+updateProductBtn.addEventListener("click", updateProduct);
+cancelUpdateBtn.addEventListener("click", () => {
   updateNameInput.value = "";
   updateDescriptionInput.value = "";
   updatePriceInput.value = "";

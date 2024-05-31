@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Samirates Outfit Store-User Platform</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Samirates Outfit Store</h1>
+        <nav>
+          <ul>
+            <li><a href="#" class="active">click cart</a></li>
+            <li>
+              <a href="#"> <ion-icon name="cart-outline"></ion-icon> </a>
+            </li>
+          </ul>
+          <div class="cart-info">
+            <span class="cart-count">0</span>
+            <span class="cart-total">Ksh00</span>
+          </div>
+        </nav>
+      </header>
+      <main>
+        <div class="product-grid" id="productList"></div>
+      </main>
+      <footer>
+        <p>&copy; Samirates Outfit Store</p>
+      </footer>
+    </div>
+    <div class="cart-overlay" id="cartOverlay">
+      <div class="cart-modal">
+        <h2>Cart</h2>
+        <ul class="cart-items" id="cartItems"></ul>
+        <div class="cart-total-container">
+          <p>Total:</p>
+          <span class="cart-total">Ksh00</span>
+        </div>
+        <button class="close-btn" id="closeCartBtn">Close</button>
+        <button class="delete-btn" id="removeFromCart">Delete</button>
+      </div>
+    </div>
+    <script src="mainn.js"></script>
+  </body>
+</html>
+<script
+  type="module"
+  src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+></script>
+<script
+  nomodule
+  src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+></script>

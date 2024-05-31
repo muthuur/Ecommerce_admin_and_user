@@ -47,6 +47,14 @@
       "price": 1800,
       "category": "Jackets",
       "image": "https://imgs.search.brave.com/wkzDatmdPB6Ll8EXwlCHiZJdrjYKNZTtLxzgWgLBA6E/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjFmdUlNUTJhV0wu/anBn"
+    },
+    {
+      "id": "1717158475376",
+      "name": "custom socks",
+      "description": "custom christmas socks",
+      "price": 400,
+      "category": "Socks",
+      "image": "https://imgs.search.brave.com/7GJq6X__RKCVQmPLhYEZ75M3FiU8baR-zeGjCtPnmoY/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9pLmV0/c3lzdGF0aWMuY29t/LzQ1MTgwNDk1L3Iv/aWwvMTU5NmRhLzU1/OTQ1MzYzMTMvaWxf/NjAweDYwMC41NTk0/NTM2MzEzX2o2dTEu/anBn"
     }
   ]
 }
